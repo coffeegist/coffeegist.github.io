@@ -3,14 +3,18 @@ layout: post
 title: How to Set Up a Jekyll Blog
 ---
 
- So, you want to start blogging, and you should! Blogging is a great way to relax, share information, and reinforce new topics that you may be learning about. Jekyll is a simple, blog-aware, static site generator, and you can use it to easily stand up your own blog and have it hosted for free using Github Pages. Today, we'll be using the [Jekyll-Now](www.jekyllnow.com) theme to style our newly-created blog, and we'll host it on Github Pages with a custom domain name.
+## Introduction
 
- To follow along with us you will need the following:
+So, you want to start blogging, and you should! Blogging is a great way to relax, share information, and reinforce new topics that you may be learning about. Jekyll is a simple, blog-aware, static site generator, and you can use it to easily stand up your own blog and have it hosted for free using Github Pages. Today, we'll be using the [Jekyll-Now](www.jekyllnow.com) theme to style our newly-created blog, and we'll host it on Github Pages with a custom domain name.
+
+To follow along with us you will need the following:
 * An installation of [Ruby >= 2.1](https://rvm.io/rvm/basics)
 * An account with [Github](https://github.com)
 * Only basic knowledge of [Jekyll](https://jekyllrb.com)
 
 ## Getting Started
+
+#### Creating the Project
 
 To get started, let's create a folder on our local computer, and download the base project for jekyll-now.
 
@@ -52,7 +56,7 @@ Once these changes are made, you're ready to view your site! Jekyll will serve y
 
 ## Tweaking the Theme
 
-Before we init, commit, and deploy our new blog, we can tweak parts of the layout to get exactly what we want. A lot of the styles to tweak will be found in the `styles.scss` file. I will make the following changes to mine.
+Before we init, commit, and deploy our new blog, we can tweak parts of the layout to get exactly what we want. A lot of the styles to tweak will be found in the `styles.scss` file. I will make the following changes to mine. To skip this section, [click here](#committing-and-deploying).
 
 * [Sticky Footer](#sticky-footer)
 * [Widen the Layout](#widen-the-layout)
@@ -160,21 +164,33 @@ code {
 
 ## Committing and Deploying
 
-Once we are satisfied with our layout then we are ready to initialize a repository, and push it to Github. One thing worth mentioning, is that your repository name must be exactly in the format of _username_.github.io. If it doesn't match exactly, Github won't properly host your site.
+#### Create a Local Repository
 
-Example: My username is `audrummer15`, so my repository would be `audrummer15.github.io`.
-
-Let's get to it! First, we have to create the repository on <https://github.com>. You can obviously do this through the web interface, but we will use the [Github API](https://developer.github.com/v3/) to create our new repository :)
+Once we are satisfied with our layout, we are ready to commit and deploy our blog! First, we need to initialize a local repository.
 
 ```bash
-# First, create a remote repository
-[coffeegist: blog]$ curl -i -u audrummer15 https://api.github.com/user/repos -d '{"name":"audrummer15.github.io"}'
-
-# Now, create a local repository, add remote origin, and push
 [coffeegist: blog]$ git init
 [coffeegist: blog]$ git add .
 [coffeegist: blog]$ git commit -m "* Initial Commit"
+```
 
+#### Create a Remote Repository
+
+Now that our code is being tracked in a local repository, we need to create a remote repository on <https://github.com> that we can push to. You can obviously do this through the web interface, but we will use the [Github API](https://developer.github.com/v3/) to create our new repository :)
+
+One thing worth mentioning is that your repository name must match the format of _username_.github.io **_exactly_**. If it doesn't, Github won't properly host your site.
+
+Example: My username is `audrummer15`, so my repository would be `audrummer15.github.io`.
+
+```bash
+[coffeegist: blog]$ curl -i -u audrummer15 https://api.github.com/user/repos -d '{"name":"audrummer15.github.io"}'
+```
+
+#### Push to Deploy
+
+Our final step is to set our remote origin, and push our finished site to Github.
+
+```bash
 # Make sure to replace my username with yours below
 [coffeegist: blog]$ git remote add origin git@github.com:audrummer15/audrummer15.github.io.git
 
@@ -183,7 +199,7 @@ Let's get to it! First, we have to create the repository on <https://github.com>
 
 Tada! Your new blog can now be viewed at <https://USERNAME.github.io/>.
 
-# Next Steps
+## Next Steps
 
 We've covered a lot of ground. We started with absolutely nothing, created a Jekyll-based blog, and set up Github Pages to host our new content! This is a great time to start writing and sharing your knowledge with the world!
 
