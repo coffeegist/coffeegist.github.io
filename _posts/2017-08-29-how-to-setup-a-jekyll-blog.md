@@ -3,8 +3,6 @@ layout: post
 title: How to Set Up a Jekyll Blog
 ---
 
-## Introduction
-
 So, you want to start blogging, and you should! Blogging is a great way to relax, share information, and reinforce new topics that you may be learning about. Jekyll is a simple, blog-aware, static site generator, and you can use it to easily stand up your own blog and have it hosted for free using Github Pages. Today, we'll be using the [Jekyll-Now](www.jekyllnow.com) theme to style our newly-created blog, and we'll host it on Github Pages with a custom domain name.
 
 To follow along with us you will need the following:
