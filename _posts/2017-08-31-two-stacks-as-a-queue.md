@@ -26,7 +26,7 @@ Note: No bounds checking is necessary for this exercise (as per the instructions
 
 ## Iteration #1 (Obviously Sleep Coding)
 
-I'll decided on `Python 3` as my language of choice, and quickly started writing code, only half thinking of what I was doing (I clearly hadn't had my coffee yet). Before I knew what was happening, I was already finished with the below solution.
+I decided on `Python 3` as my language of choice, and quickly started writing code, only half thinking of what I was doing (I clearly hadn't had my coffee yet). Before I knew what was happening, I was already finished with the below solution.
 
 ```python
 class MyQueue(object):
