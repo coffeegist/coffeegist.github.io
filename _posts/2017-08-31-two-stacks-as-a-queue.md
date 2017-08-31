@@ -24,9 +24,9 @@ I was to implement a queue with 3 methods: put, pop, and peek. Put would add ele
 
 Note: No bounds checking is necessary for this exercise (as per the instructions).
 
-## Iteration #1, Naive
+## Iteration #1 (Obviously Sleep Coding)
 
-I chose `Python 3` for my language of choice, and quickly started writing code, only have thinking of what I was doing (I clearly hadn't had my coffee yet). Before I knew what was happening, I was already finished with the below solution.
+I'll decided on `Python 3` as my language of choice, and quickly started writing code, only half thinking of what I was doing (I clearly hadn't had my coffee yet). Before I knew what was happening, I was already finished with the below solution.
 
 ```python
 class MyQueue(object):
@@ -47,11 +47,11 @@ class MyQueue(object):
         self.length += 1
 ```
 
-Ahh, it's beautiful and that was easy. Wait, I completely ignored the whole problem statement! I used no stacks, only a python list to implement this! At least I remembered what a queue was on auto-pilot. Let's try that again, but this time with feeling.
+Ahh, it's beautiful and that was easy. Wait, I completely ignored the whole problem statement! I used no stacks, only a python list to implement this! At least I remembered what a queue was on auto-pilot. Let's try that once more, with feeling.
 
 ## Iteration #2, Refined
 
-After making a nice Aeropressed cup of [Counter Culture Coffee](https://counterculturecoffee.com/), I sat back down at my desk and devised a way of creating a queue from two stacks. It felt so backwards trying to come up with this. I could add elements to a stack just fine, but when it came to popping or peeking elements, I needed the reverse of the stack. This is where the second stack comes in.
+After making a nice Aeropress cup of [Counter Culture Coffee](https://counterculturecoffee.com/), I sat back down at my desk and devised a way of creating a queue from two stacks. It felt so backwards trying to come up with this. I could add elements to a stack just fine, but when it came to popping or peeking elements, I needed the reverse of the stack. This is where the second stack comes in.
 
 Whenever I want to peek or pop an element I will need to sequentially load the stack of new elements into another stack (reversing the order), and then peek or pop the last element from stack #2.
 
