@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Custom Domains with SSL for Github Pages
+category: Gist
+tags: [ssl, cloudflare, networking, github]
 ---
 
 In a [previous post]({% post_url 2017-08-29-how-to-set-up-a-jekyll-blog %}), we discussed how to set up a Jekyll-based blog to be hosted using Github Pages. The process is straight-forward, and also free! So, if you've ever had a desire to start blogging, have a look at the previous post, and join us back here once you've set up your blog!
