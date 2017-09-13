@@ -104,9 +104,12 @@ I was able to successfully compromise sufferance, and gain access to the admin n
 I'll add here, for reference, that this month I really took advantage of the multiple subnet setup to practice pivoting. There were many ways I learned to pivot, but the most useful was definitely SSH tunnels, and I was glad to demonstrate my understanding of them to compromise... well, a few special boxes :)
 
 r00t
+
 ---
 
 **sufferance** \| **gh0st** \| **pedro** \| **niky** \| **jeff** \| **oracle** \| **kraken** \| **brett** \| **core** \| **observer** \| **slave** \| **master** \| **nina** \| **john** \| **carrie** \| **internal** \| **mario** \| **luigi** \| **tricia** \| **314159265**
+
+---
 
 ## Coffee Break!
 
