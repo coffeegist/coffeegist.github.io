@@ -149,22 +149,22 @@ The next box I went after was 20 points, and things did not go as smoothly. I sc
 
 At this point, I hopped over to the next 20 point box. Scanning and enumerating it as part of my normal process, but I couldn't find anything there either. After about an hour, I moved on to the 10 point box thinking that a quick win would get me back on my feet. Nothing again. I can't find anything!
 
-Around 1230 I had begun to panic. Bouncing from box to box to box looking for any possible way in. I kept coming up with the same info for the first 20 point box.
+Around 1230 I had begun to panic. Bouncing from box to box to box looking for any possible way in. I kept coming back to that first box, but I just kept seeing the same information for it.
 
 ### Success! [1930 hours]
 
-Finally, almost 10 hours later, I didn't know what else to do. So I downloaded a copy of the vulnerable software to my Windows box provided by Offensive-Security, and started reversing the exploit I was using to see why it wasn't working. The exploit worked. What the heck? So I threw it at the box again, and it worked! It's about time I got another low-privilege shell.
+Finally, almost 10 hours later, I didn't know what else to do. So I downloaded a copy of the vulnerable software to my Windows box provided by Offensive-Security, and started reversing the exploit I was using to see why it wasn't working. The exploit worked without modification. What the heck? So I threw it at the box again, and it worked! It's about time! I got another low-privilege shell.
 
-Now was the hard part. Escalating. I spent a couple of hours escalating this one, but I finally got it around 2200! That's it! 70 points, I officially have enough points to pass my OSCP and the pressure is off.
+Now was the hard part. Escalating. I spent a couple of hours enumerating and looking for a path to privesc, but I finally got it around 2200! That's it! 70 points, I officially have enough points to pass my OSCP and the pressure is off.
 
 ### Flawless Victory [2300 hours]
 
-I spent the next hour banging away at the 10 point box. I was so dumb. I should have gotten this one immediately, but the test can get to you. Anyways, in around an hour I had obtained administrative privileges. It was a very simple path.
+I spent the next hour banging away at the 10 point box. I was so dumb. I should have gotten this one immediately, but the stress of the test can get to you. Anyways, in around an hour I had obtained administrative privileges. It was a very simple path.
 
 Going for gold, I switched back over to the last 20 point box around 1100. This box required me to go outside of my normal process, but it was nothing I hadn't seen in the labs. So I guess my process was slightly off. It took about an hour to find my foothold on the box, and another hour to escalate. After 17 gruesome hours there I was. 100 points in the bag, screenshots galore, and some writing to do.
 
-I did a quick take on my exam report that was due the next day, and got to bed around 0400. A successful day, and the feeling of accomplishment was incredible.
+I did a quick take on my exam report that was due the next day, and got to bed around 0400. I'd call that a successful day.
 
 ## Coffee Break!
 
-Throughout my life few things have given me the sense of accomplishment, pride, and confidence as successfully completing the OSCP did. I was able to see massive improvements in my penetration testing knowledge not only in theory, but also in practice. This course gave me the credentials I needed to break into working with the penetration testing team I do development for. It also gave me the confidence to do penetration tests with a certain level of confidence. By no means have I hit a point where I can sit back and coast. However, I've proven to myself and my colleagues that I have the mindset and determination needed to be a professional penetration tester. Until next time, Happy Hacking!
+Throughout my life few things have given me the sense of accomplishment, pride, and confidence that successfully completing the OSCP did. I was able to see massive improvements in my penetration testing knowledge not only in theory, but also in practice. This course gave me the credentials I needed to break into working with the penetration testing team I do development for. It also gave me the confidence I needed to successfully complete penetration tests as part of a team. By no means have I hit a point where I can sit back and coast. However, I've proven to myself and my colleagues that I have the mindset and determination needed to be a professional penetration tester. Until next time, Happy Hacking!
