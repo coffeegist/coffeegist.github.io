@@ -5,7 +5,7 @@ category: Security
 tags: [slae, shell, assembly, programming]
 ---
 
-No coffee tonight. It's too late for that. It's not that this assignment took long it all, but there were several things I had to do before I could finish this up and post it. Nevertheless, I have successfully implemented tcp reverse shellcode for a linux/x86 system as part of the SLAE exam. Continue reading to find out how it was done!
+No coffee tonight. It's too late for that. It's not that this assignment took long at all, but there were several things I had to do before I could finish this up and post it. Nevertheless, I have successfully implemented a tcp reverse shellcode for linux/x86 systems as part of the SLAE exam. Continue reading to find out how it was done!
 
 
 # Assignment 2 - TCP Reverse Shell
