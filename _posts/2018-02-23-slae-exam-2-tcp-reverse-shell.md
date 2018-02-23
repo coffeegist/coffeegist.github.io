@@ -88,7 +88,7 @@ And that's really all that was needed besides some minor code modification. We j
 
 **_assignment2.asm_**
 
-```asm
+```
 ; Filename: assignment2.nasm
 ; Author:  Adam Brown
 ; Website:  https://coffeegist.com
@@ -206,6 +206,7 @@ dup_descriptors:
   mov al, 1;
   int 0x80;
 ```
+
 
 **_Getting the Shellcode_**
 
