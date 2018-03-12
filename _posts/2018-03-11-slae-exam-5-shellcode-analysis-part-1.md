@@ -22,7 +22,7 @@ If we want to analyze one of these payloads, there are two things we need to do.
 To accomplish these two tasks, I used the following commands:
 
 ```bash
-root@kali:~/courses/slae/exam/assignment5# msfvenom -p linux/x86/read_file -a x86 --platform linux > read_file.raw
+root@kali:~/courses/slae/exam/assignment5# msfvenom -p linux/x86/read_file PATH=/etc/motd -a x86 --platform linux > read_file.raw
 
 root@kali:~/courses/slae/exam/assignment5# ndisasm -b 32 read_file.raw > read_file_analyzed.nasm
 ```
