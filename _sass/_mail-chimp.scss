@@ -11,12 +11,31 @@
   }
 }
 
+#mc_embed_signup_mobile {
+  display: block;
+  background: #fff;
+  clear: left;
+  font: 14px;
+
+  @include breakpoint($large) {
+    display: none;
+  }
+}
+
 #mc_embed_signup form {
   padding: 0 !important;
 }
 
 #mc-embedded-subscribe-form {
   background: #fff;
+}
+
+#mc-embedded-subscribe {
+  background-color: #FC561E !important;
+  color: #fff;
+  width: 100%;
+  line-height: 2em;
+  text-align: center;
 }
 
 #mce-EMAIL {

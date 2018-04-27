@@ -44,6 +44,23 @@ layout: default
         {% endif %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        <!-- Begin MailChimp Mobile Signup Form -->
+        <div id="mc_embed_signup_mobile">
+          <hr>
+          <h4>Get a FREE Hacking Video Course!</h4>
+          <p>
+            We will soon be releasing free video courses on how to improve your hacking and programming skills! What I've found since my review of the OSCP, is that many people lack just a little bit of the fundamental knowledge of how software works. Our goal is to provide that slight amount of knowledge in order to close the gap between students and passing exams such as the OSCP. Subscribe to our mailing list to stay updated on when these courses will be available.
+          </p>
+          <form action="https://coffeegist.us18.list-manage.com/subscribe/post?u=55ecd7f46498e485fb51c2685&amp;id=8cd31646f3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_55ecd7f46498e485fb51c2685_8cd31646f3" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              </div>
+          </form>
+        </div>
+        <!--End mc_embed_signup-->
       </section>
 
       <footer class="page__meta">
