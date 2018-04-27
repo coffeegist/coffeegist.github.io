@@ -1,0 +1,24 @@
+#mc_embed_signup {
+  display: none;
+  background: #fff;
+  clear: left;
+  font: 14px;
+  position: absolute;
+  bottom: 0;
+
+  @include breakpoint($large) {
+    display: block;
+  }
+}
+
+#mc_embed_signup form {
+  padding: 0 !important;
+}
+
+#mc-embedded-subscribe-form {
+  background: #fff;
+}
+
+#mce-EMAIL {
+  width: 100% !important;
+}

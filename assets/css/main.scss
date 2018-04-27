@@ -6,3 +6,8 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Custom */
+@import "svg-icons";
+@import "custom"; // minimal mistakes customizations
+@import "mail-chimp"; // mail chimp subscribe forms
