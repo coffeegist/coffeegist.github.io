@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Cisco Prime Collaboration Provisioning RCE
 category: Security
 tags: [exploit, hacking, security]

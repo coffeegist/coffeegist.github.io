@@ -1,0 +1,59 @@
+#main {
+  margin-top: 0;
+}
+
+.page__footer {
+  text-align: center;
+}
+
+.site-title {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #333 !important;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 1.7em;
+  letter-spacing: 1px;
+}
+
+.site-title:hover {
+  color: #4183C4 !important;
+}
+
+.site-tagline {
+  margin: -5px 0 0 0;
+  color: #666;
+  font-size: 16px;
+}
+
+div.highlighter-rouge, figure.highlight {
+  font-size: 0.65em !important;
+}
+
+.author__avatar img {
+  border: 0px;
+  border-radius: 0;
+}
+
+.sidebar {
+  opacity: 1 !important;
+}
+
+.masthead {
+  border: 0;
+}
+
+.masthead__menu {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-color;
+}
+
+.author__urls a {
+  display: initial !important;
+}
+
+.list__item:first-of-type > .archive__item > .archive__item-title {
+  margin-top: 0;
+}

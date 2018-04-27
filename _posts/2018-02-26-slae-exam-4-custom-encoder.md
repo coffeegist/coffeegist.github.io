@@ -1,5 +1,4 @@
 ---
-layout: post
 title: SLAE Exam 4 Custom Encoder
 category: Security
 tags: [slae, shell, assembly, programming]

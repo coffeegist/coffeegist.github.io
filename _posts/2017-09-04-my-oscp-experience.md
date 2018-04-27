@@ -1,5 +1,4 @@
 ---
-layout: post
 title: My OSCP Experience
 category: Security
 tags: [oscp, hacking, security, review]

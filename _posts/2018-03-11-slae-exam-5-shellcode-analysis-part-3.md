@@ -1,5 +1,4 @@
 ---
-layout: post
 title: SLAE Exam 5 Shellcode Analysis - Part 3
 category: Security
 tags: [slae, shell, assembly, programming]

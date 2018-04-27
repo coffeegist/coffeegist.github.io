@@ -1,5 +1,4 @@
 ---
-layout: post
 title: SLAE Exam 3 Egg Hunter Shellcode
 category: Security
 tags: [slae, shell, assembly, programming]
@@ -240,7 +239,7 @@ root@kali:~/courses/slae/exam/assignment3#
 
 Wait what?? Why did we not get our shell? This took a little gdb magic to figure out...
 
-{% include image.html name="gdb-assignment3.png" %}
+{% include figure image_path="/assets/images/2018-02-25-slae-exam-3-egg-hunter-shellcode/gdb-assignment3.png" %}
 
 If we look closely, we notice that our instructions in our egg hunter are wrong. Specifically, starting with this line:
 

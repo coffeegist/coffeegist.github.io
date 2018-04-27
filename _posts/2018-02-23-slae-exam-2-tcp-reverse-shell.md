@@ -1,5 +1,4 @@
 ---
-layout: post
 title: SLAE Exam 2 TCP Reverse Shell
 category: Security
 tags: [slae, shell, assembly, programming]

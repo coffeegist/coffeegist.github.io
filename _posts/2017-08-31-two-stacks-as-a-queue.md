@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Two Stacks as a Queue
 category: Gist
 tags: [code-challenge, python]

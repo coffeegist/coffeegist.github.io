@@ -1,5 +1,4 @@
 ---
-layout: post
 title: How to Set Up a Jekyll Blog
 category: Gist
 tags: [jekyll, web, github]

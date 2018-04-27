@@ -1,5 +1,4 @@
 ---
-layout: post
 title: SLAE Exam 1 TCP Bind Shell
 category: Security
 tags: [slae, shell, assembly, programming]
