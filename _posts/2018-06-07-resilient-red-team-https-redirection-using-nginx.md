@@ -14,7 +14,7 @@ On a typical red team assessment, a redirector is a crucial part of the infrastr
 
 On past assessments, we would usually have a setup like the one seen below. Our C2 would leave a compromised workstation, and call out to a redirector in the cloud. The redirector would be running [socat](http://www.dest-unreach.org/socat/doc/socat.html), forwarding traffic from port 443 on the redirector to port 443 on our C2 server.
 
-{% include figure image_path="/assets/images/2018-08-07-resilient-red-team-https-redirectors/basic-redirector.png" %}
+{% include figure image_path="/assets/images/2018-06-07-resilient-red-team-https-redirection-using-nginx/basic-redirector.png" %}
 
 This is all completely fine, until you start to add in three things: proxies, free SSL certificates, and 120-day long assessments.
 
