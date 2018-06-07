@@ -1,5 +1,5 @@
 ---
-title: Resilient Red Team HTTPS Redirectors
+title: Resilient Red Team HTTPS Redirection Using Nginx
 category: Security
 tags: [red-team, hacking, security, tutorial]
 ---
