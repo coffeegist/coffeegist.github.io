@@ -7,7 +7,7 @@ tags: [red-team, hacking, security, tutorial]
 
 On a typical red team assessment, a redirector is a crucial part of the infrastructure in use. A redirector is basically a box that sits out on the internet (usually in some type of cloud service provider's network) and forwards traffic for the red team so that the blue team can never see the IP address of the attacker's command and control (C2) server. Using redirectors, if a C2 channel gets burned, the red team can just spin up a new redirector, rather than rolling their entire infrastructure. When HTTPS gets involved, you have to deal with certificates, categorization, and a whole gambit of problems. This technique aims to solve that.
 
-[Click here](#the-solution) to jump straight to the solution.
+[Click here](#the-solution) to jump straight to the solution, or view the code needed to implement this in your own teams on [GitHub](#repositories).
 
 
 ## The Old Way
@@ -88,5 +88,6 @@ With this information known, we can let [certbot](https://certbot.eff.org/) take
 This solution really saved our team on our last assessment. Admittedly, there was a little luck involved in noticing how great this solution really was, but a huge shout out again to [xan7r](https://github.com/xan7r) for helping me walk through just how great this solution could be. If anyone is interested, I've began work on a script for setting this up that I will link below. Pull-requests are welcome, and I hope your teams are able to take this and run with it! Let me know your thoughts in the comments below!
 
 ##### Repositories
+
 * [Site Categorization Templates](https://github.com/audrummer15/cat-sites)
-* [C2 Server Setup Script](https://github.com/audrummer15/now-you-see-me)
+* [C2/Nginx Server Setup Script](https://github.com/audrummer15/now-you-see-me)
