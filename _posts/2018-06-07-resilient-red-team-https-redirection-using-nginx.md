@@ -7,7 +7,7 @@ tags: [red-team, hacking, security, tutorial]
 
 On a typical red team assessment, a redirector is a crucial part of the infrastructure in use. A redirector is basically a box that sits out on the internet (usually in some type of cloud service provider's network) and forwards traffic for the red team so that the blue team can never see the IP address of the attacker's command and control (C2) server. Using redirectors, if a C2 channel gets burned, the red team can just spin up a new redirector, rather than rolling their entire infrastructure. When HTTPS gets involved, you have to deal with certificates, categorization, and a whole gambit of problems. This technique aims to solve that.
 
-[Click here](#the-solution) to jump straight to the solution, or view the code needed to implement this in your own teams on [GitHub](#repositories).
+[Click here](#the-solution) to jump straight to the solution, or view the code needed to implement this in your own teams on my [repositories](#repositories).
 
 
 ## The Old Way
@@ -74,6 +74,8 @@ server {
 ```
 
 The main line to pay attention to is the `try_files` line, which tells nginx to try to serve files in that order. If the uri does not exist, then the request is handled by the `@c2` block. This block passes the traffic back to our c2 server, and is completely transparent to the client.
+
+A more detailed setup script is located on [GitHub](https://github.com/audrummer15/now-you-see-me).
 
 
 #### Updating SSL Certs
