@@ -67,9 +67,69 @@ The last thing I knew to try was to find a frontable domain that accepts TLSv1.0
 Here we see that TLSv1.0 is supported, and there is plenty of overlap on cipher suites. I fire up a beacon, and see that the TLS handshake works like a charm.
 
 
+### But Why? Is it Beacon?
+
+UPDATE: I was correctly informed that this is not a limitation of beacon, but rather a limitation of the underlying host. Beacon in no way controls the TLS version offered like I originally suspected, but rather uses whatever means available to it by the underlying operating system. So, yes, I'm saying that my Windows 7 test box did not allow >=TLSv1.1.
+
+{% include figure image_path="/assets/images/2019-02-07-domain-fronting-beacons-and-tls/no-tls-for-you.png" %}
+
+### Testing This Programmatically
+
+Once I realized I had completely goofed, I wanted a way to programmatically check this for future reference. I also wanted the ability to make sure that I never try and stage a production payload over a fronted domain unless I know the protocols will match. So, I wanted to see what registry keys were effected when changing the options seen above in the Internet Properties dialog. Firing up [procmon](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon), I see the following.
+
+{% include figure image_path="/assets/images/2019-02-07-domain-fronting-beacons-and-tls/procmon-secureprotocols.png" %}
+
+It appears that when modifying the TLS values in the Internet Properties dialog, one of the registry keys effected is `HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\SecureProtocols`. The value is indeed changing when selecting/deselecting different TLS protocols, but the value didn't make sense to me yet. I needed to keep digging.
+
+A quick search through the registry brought to my attention the following three registry items.
+
+```
+HKLM:\software\Microsoft\Internet Explorer\AdvancedOptions\CRYPTO\TLS1.0
+HKLM:\software\Microsoft\Internet Explorer\AdvancedOptions\CRYPTO\TLS1.1
+HKLM:\software\Microsoft\Internet Explorer\AdvancedOptions\CRYPTO\TLS1.2
+```
+
+These were definitely interesting, so I opened up regedit to take a look.
+
+{% include figure image_path="/assets/images/2019-02-07-domain-fronting-beacons-and-tls/regedit-tls.png" %}
+
+These TLS registry items all have a `CheckedValue` item, and a corresponding `Mask` item. This led me to believe that when the box is checked, the value of Mask/CheckedValue would be applied to a registry key somewhere. In this case, I was thinking it would be the `SecureProtocols` key we saw earlier. This turned out to be the case.
+
+With that, I had enough information to build my script. You can check your current settings (or build logic into a custom stager) with the following script:
+
+```posh
+$tls10DefaultValue = (Get-ItemProperty -Path 'HKLM:\software\Microsoft\Internet Explorer\AdvancedOptions\CRYPTO\TLS1.0').CheckedValue
+$tls11DefaultValue = (Get-ItemProperty -Path 'HKLM:\software\Microsoft\Internet Explorer\AdvancedOptions\CRYPTO\TLS1.1').CheckedValue
+$tls12DefaultValue = (Get-ItemProperty -Path 'HKLM:\software\Microsoft\Internet Explorer\AdvancedOptions\CRYPTO\TLS1.2').CheckedValue
+
+$currentSecureProtocols = (Get-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings').SecureProtocols
+
+if (($currentSecureProtocols -bAnd $tls10DefaultValue) -eq $tls10DefaultValue)
+{
+    "TLSv1.0 is Supported"
+} else {
+    "TLSv1.0 is Not Supported"
+}
+
+if (($currentSecureProtocols -bAnd $tls11DefaultValue) -eq $tls11DefaultValue)
+{
+    "TLSv1.1 is Supported"
+} else {
+    "TLSv1.1 is Not Supported"
+}
+
+if (($currentSecureProtocols -bAnd $tls12DefaultValue) -eq $tls12DefaultValue) {
+    "TLSv1.2 is Supported"
+} else {
+    "TLSv1.2 is Not Supported"
+}
+```
+
 ## Coffee Break!
 
-By this point, I'm convinced that beacon will not be able to connect to sites that do not accept <=TLSv1.0. If this is the case, this will impact domain fronting due to organizations improving their domain security practices and cutting off older versions of the TLS protocol. This is an easy workaround for beacon, but it could potentially be tough to implement without breaking compatibility with older systems. It would be nice to see this as a configurable parameter one day (Malleable C2 perhaps?!), but until then, happy hacking!
+~~By this point, I'm convinced that beacon will not be able to connect to sites that do not accept <=TLSv1.0.~~ I was under the mistaken impression that I was testing from a fully patched Windows 7 box. This was not the case, and thus, my machine was not allowing beacon to offer anything above TLSv1.0. When this happens, domain fronting will be impacted due to organizations improving their domain security practices and cutting off older versions of the TLS protocol. ~~This is an easy workaround for beacon, but it could potentially be tough to implement without breaking compatibility with older systems. It would be nice to see this as a configurable parameter one day (Malleable C2 perhaps?!), but~~
+
+TLDR; beacon is awesome, and this was a valuable lesson in double checking versions and test equipment before starting anything. However, good things still came out of this, and I'll definitely be putting the TLS script to use as a fail-safe for future assessments. A big thanks to Raphael for responding to this and helping me see the true issue. Until next time, happy hacking!
 
 
 #### Bonus!
