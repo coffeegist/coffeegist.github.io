@@ -69,7 +69,7 @@ Here we see that TLSv1.0 is supported, and there is plenty of overlap on cipher 
 
 ## Coffee Break!
 
-By this point, I'm convinced that beacon will not be able to connect to sites that do not accept <=TLSv1.0. If this is the case, this will impact fronting due to organizations improving their domain security practices and cutting off older versions of the TLS protocol. This is an easy workaround for beacon, but it could potentially be tough to implement without breaking compatibility with older systems. It would be nice to see this as a configurable parameter one day (Malleable C2 perhaps?!), but until then, happy hacking!
+By this point, I'm convinced that beacon will not be able to connect to sites that do not accept <=TLSv1.0. If this is the case, this will impact domain fronting due to organizations improving their domain security practices and cutting off older versions of the TLS protocol. This is an easy workaround for beacon, but it could potentially be tough to implement without breaking compatibility with older systems. It would be nice to see this as a configurable parameter one day (Malleable C2 perhaps?!), but until then, happy hacking!
 
 
 #### Bonus!
