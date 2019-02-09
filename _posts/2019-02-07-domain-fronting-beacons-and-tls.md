@@ -69,7 +69,7 @@ Here we see that TLSv1.0 is supported, and there is plenty of overlap on cipher 
 
 ### But Why? Is it Beacon?
 
-UPDATE: I was correctly informed that this is not a limitation of beacon, but rather a limitation of the underlying host. Beacon in no way controls the TLS version offered like I originally suspected, but rather uses whatever means available to it by the underlying operating system. So, yes, I'm saying that my Windows 7 test box did not allow >=TLSv1.1.
+UPDATE: I was correctly informed that this is not a limitation of beacon, but rather a limitation of the underlying host. While Cobalt Strike's teamserver only supports up to TLSv1.0 (which isn't a big deal when using redirectors with domain fronting), beacon in no way controls the TLS version offered like I originally suspected, but rather uses whatever means available to it by the underlying operating system. So, yes, I'm saying that my Windows 7 test box did not allow >=TLSv1.1.
 
 {% include figure image_path="/assets/images/2019-02-07-domain-fronting-beacons-and-tls/no-tls-for-you.png" %}
 
