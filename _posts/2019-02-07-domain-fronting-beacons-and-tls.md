@@ -75,11 +75,11 @@ UPDATE: I was correctly informed that this is not a limitation of beacon, but ra
 
 ### Testing This Programmatically
 
-Once I realized I had completely goofed, I wanted a way to programmatically check this for future reference. I also wanted the ability to make sure that I never try and stage a production payload over a fronted domain unless I know the protocols will match. So, I wanted to see what registry keys were effected when changing the options seen above in the Internet Properties dialog. Firing up [procmon](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon), I see the following.
+Once I realized I had completely goofed, I wanted a way to programmatically check this for future reference. I also wanted the ability to make sure that I never try and stage a production payload over a fronted domain unless I know the protocols will match. So, I wanted to see what registry keys were affected when changing the options seen above in the Internet Properties dialog. Firing up [procmon](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon), I see the following.
 
 {% include figure image_path="/assets/images/2019-02-07-domain-fronting-beacons-and-tls/procmon-secureprotocols.png" %}
 
-It appears that when modifying the TLS values in the Internet Properties dialog, one of the registry keys effected is `HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\SecureProtocols`. The value is indeed changing when selecting/deselecting different TLS protocols, but the value didn't make sense to me yet. I needed to keep digging.
+It appears that when modifying the TLS values in the Internet Properties dialog, one of the registry keys affected is `HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\SecureProtocols`. The value is indeed changing when selecting/deselecting different TLS protocols, but the value didn't make sense to me yet. I needed to keep digging.
 
 A quick search through the registry brought to my attention the following three registry items.
 
