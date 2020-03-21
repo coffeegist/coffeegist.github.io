@@ -29,7 +29,7 @@ Most organizations we assess have some type of web proxy in place. This means th
 
 ##### Categorization
 
-We'll talk more on SSL certificates later, but for now, let's focus on what it takes to get a site categorized. Basically, it's just necessary to host content on the site that fits the categorization you are going for. Example, I mostly try to categorize as a Business site because it's vague, and generally marked as a safe category by customers. So, I just need to have some type of content that makes the site seem like it could be a legitimate business. See my [github](https://github.com/audrummer15/cat-sites) for some sites I've used to categorize domains in the past.
+We'll talk more on SSL certificates later, but for now, let's focus on what it takes to get a site categorized. Basically, it's just necessary to host content on the site that fits the categorization you are going for. Example, I mostly try to categorize as a Business site because it's vague, and generally marked as a safe category by customers. So, I just need to have some type of content that makes the site seem like it could be a legitimate business. See my [github](https://github.com/coffeegist/cat-sites) for some sites I've used to categorize domains in the past.
 
 Categorization is hit or miss, sometimes an analyst will deny your categorization request, and sometimes they'll accept it. Just try a few times, and customize content to make it seem more legitimate.
 
@@ -75,7 +75,7 @@ server {
 
 The main line to pay attention to is the `try_files` line, which tells nginx to try to serve files in that order. If the uri does not exist, then the request is handled by the `@c2` block. This block passes the traffic back to our c2 server, and is completely transparent to the client.
 
-A more detailed setup script is located on [GitHub](https://github.com/audrummer15/now-you-see-me).
+A more detailed setup script is located on [GitHub](https://github.com/coffeegist/now-you-see-me).
 
 
 #### Updating SSL Certs
@@ -91,5 +91,5 @@ This solution really saved our team on our last assessment. Admittedly, there wa
 
 ##### Repositories
 
-* [Site Categorization Templates](https://github.com/audrummer15/cat-sites)
-* [C2/Nginx Server Setup Script](https://github.com/audrummer15/now-you-see-me)
+* [Site Categorization Templates](https://github.com/coffeegist/cat-sites)
+* [C2/Nginx Server Setup Script](https://github.com/coffeegist/now-you-see-me)

@@ -179,10 +179,10 @@ Now that our code is being tracked in a local repository, we need to create a re
 
 One thing worth mentioning is that your repository name must match the format of _username_.github.io **_exactly_**. If it doesn't, Github won't properly host your site.
 
-Example: My username is `audrummer15`, so my repository would be `audrummer15.github.io`.
+Example: My username is `coffeegist`, so my repository would be `coffeegist.github.io`.
 
 ```bash
-[coffeegist: blog]$ curl -i -u audrummer15 https://api.github.com/user/repos -d '{"name":"audrummer15.github.io"}'
+[coffeegist: blog]$ curl -i -u coffeegist https://api.github.com/user/repos -d '{"name":"coffeegist.github.io"}'
 ```
 
 #### Push to Deploy
@@ -191,7 +191,7 @@ Our final step is to set our remote origin, and push our finished site to Github
 
 ```bash
 # Make sure to replace my username with yours below
-[coffeegist: blog]$ git remote add origin git@github.com:audrummer15/audrummer15.github.io.git
+[coffeegist: blog]$ git remote add origin git@github.com:coffeegist/coffeegist.github.io.git
 
 [coffeegist: blog]$ git push -u origin master
 ```
