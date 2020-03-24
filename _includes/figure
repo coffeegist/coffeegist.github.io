@@ -5,7 +5,11 @@
     {% else %}
       "{{ include.image_path | relative_url }}"
     {% endif %}
-    alt="{% if include.alt %}{{ include.alt }}{% endif %}">
+    alt="{% if include.alt %}{{ include.alt }}{% endif %}"
+    style="{% if include.width %}
+      width:{{ include.width }}%;
+      margin-left: {% assign margin = 100 | minus: include.width | divided_by: 2 %} {{ margin }}%
+    {% endif %}">
   {% if include.caption %}
     <figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
   {% endif %}
