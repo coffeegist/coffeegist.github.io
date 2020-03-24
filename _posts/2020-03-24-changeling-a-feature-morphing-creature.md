@@ -44,7 +44,7 @@ Saved as: calc.bin
 
 Now that we have our shellcode, we include it in our project as an embedded resource by selecting `Project -> Existing Item` from the Visual Studio menu, and selecting our freshly created `calc.bin`. Now, we'll make sure we have the Solutions Explorer (`View -> Solutions Explorer`) and the Properties Window (`View -> Properties Window`) open in Visual Studio. When we select `calc.bin` in the solutions explorer, we are shown several properties of the file in the properties window. We'll set the Build Action property to Embedded Resource, as described earlier.
 
-{% include figure image_path="/assets/images/2020-03-27-changeling-a-feature-morphing-creature/calc-bin-properties.png" width='30' %}
+{% include figure image_path="/assets/images/2020-03-24-changeling-a-feature-morphing-creature/calc-bin-properties.png" width='30' %}
 
 Now, we need code to read our embedded resource out. To do this, we simply replace the following line in pwndizzle's code:
 
@@ -86,7 +86,7 @@ Now, instead of having our shellcode converted to readable text and hardcoded, o
 
 Now that we have our newly generated `ShellcodeLoader.exe`, let's see what Changeling can do.
 
-{% include figure image_path="/assets/images/2020-03-27-changeling-a-feature-morphing-creature/changeling-help-menu.png" %}
+{% include figure image_path="/assets/images/2020-03-24-changeling-a-feature-morphing-creature/changeling-help-menu.png" %}
 
 Changeling currently exists with three methods, `extract`, `list`, and `replace`, and these methods are pretty self-explanatory. They can be used to extract, list, and replace any embedded resource in the assembly you pass to Changeling. The implications of this are that you no longer have to recompile tools that use shellcode for each individual assessment. You can simply take the payload from a static place, use Changeling to swap out the embedded resource, and you're good to go!
 
