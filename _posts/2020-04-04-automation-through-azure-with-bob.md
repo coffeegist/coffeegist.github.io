@@ -295,7 +295,7 @@ This generates a blueprint file that looks like the following:
 ]
 ```
 
-This is fairly straightforward. The only modifications you might make are to the `source_branch` and `tags` fields to suit your own requirements. The `source_branch` field tells Bob which Git branches the builds should have occurred on, and the `tags` field tells Bob which Azure DevOps Build Tags to download (these are not Git tags). If you recall from earlier, we tagged our Demo-Morph builds with `calc` and `notepad` tags to distinguish between which build would inject into which application. We use those tags in teh blueprint above to download the appropriate versions. Upon running this with Bob, as expected, all of the listed tools are retrieved and ready for your next engagement.
+This is fairly straightforward. The only modifications you might make are to the `source_branch` and `tags` fields to suit your own requirements. The `source_branch` field tells Bob which Git branches the builds should have occurred on, and the `tags` field tells Bob which Azure DevOps Build Tags to download (these are not Git tags). If you recall from earlier, we tagged our Demo-Morph builds with `calc` and `notepad` tags to distinguish between which application the build would inject into. We use those tags in teh blueprint above to download the appropriate versions. Upon running this with Bob, as expected, all of the listed tools are retrieved and ready for your next engagement.
 
 {% include figure image_path="/assets/images/2020-04-04-automation-through-azure-devops-with-bob/bob-run-downloads.png" caption="Bob Downloads Tools from Azure" %}
 
