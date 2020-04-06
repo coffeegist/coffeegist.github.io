@@ -13,7 +13,7 @@ To skip straight to the details on how to use Bob, [click here](#finally-tell-me
 
 ## The Problem
 
-Not to repeat the issue facing offensive teams, but manually building payloads sucks. I’m not talking about the problem-solving challenge of creating payloads, but compiling and substituting all of your options by hand is tedious and boring. Changeling assists with part of that, but what if swapping out embedded resources isn't enough to reconfigure your tools? What if you still need to recompile a payload? If you haven't read up on Azure DevOps, I encourage you to pause and read the introductory posts by [@_xpn_](https://blog.xpnsec.com/building-modifying-packing-devops/) and [@424f424f](https://medium.com/@rvrsh3ll/getting-started-with-azuredevops-8bf0bf089bc3) before continuing.
+Not to repeat the issue facing offensive teams, but manually building payloads sucks. I’m not talking about the problem-solving challenge of creating payloads, but compiling and substituting all of your options by hand is tedious and boring. Changeling assists with part of that, but what if swapping out embedded resources isn't enough to reconfigure your tools? What if you still need to recompile a payload? If you haven't read up on Azure DevOps, I encourage you to pause and read the introductory posts by [@\_xpn\_](https://blog.xpnsec.com/building-modifying-packing-devops/) and [@424f424f](https://medium.com/@rvrsh3ll/getting-started-with-azuredevops-8bf0bf089bc3) before continuing.
 
 Once you are familiar with DevOps, you realize that it can be an incredible tool! However, queuing builds, and retrieving artifacts can be slightly cumbersome, especially if you are trying to move payloads across to a different op box. As Steve mentions in one of the articles above, there's not a known way (at least to me) of selecting all pipelines and downloading artifacts for all of them. I needed a fast way to modify, build, and retrieve payloads on my assessments without needing to open up a web browser and tweak things, and I wanted these tasks to be repeatable, shareable, and easily retrievable. This is where Bob comes in.
 
@@ -162,7 +162,7 @@ The resulting blueprint will look like this:
 
 For the most part, this JSON object should be self-explanatory. It shows the project and definition for this build, it states the artifacts from the build will be downloaded, and that it will build from the master branch of the repository. You can also see the `CONFIGURATIONS` variable we created earlier, and its default value. The tags field exists so that you can tag your builds for more advanced usage, which we can cover in a later post.
 
-Let’s say we want to build Demo with the `TARGET_PROCESS` of `notepad`, but we also want to build it with a `TARGET_PROCESS` of `calc`. Do we need to run through Bob again? Nope, just add a new build instance to the current blueprint:
+Let’s say we want to build Demo with the `TARGET_PROCESS` of `notepad`, but we also want to build it with a `TARGET_PROCESS` of `calc`. Do we need to run through Bob again? Nope, just add a new configuration item to the current blueprint:
 
 ```json
 ...snip...
@@ -185,7 +185,7 @@ Let’s say we want to build Demo with the `TARGET_PROCESS` of `notepad`, but
 ...snip...
 ```
 
-Ok, that's pretty cool! The more elements you place in the `CONFIGURATIONS` array here, the more loops the PowerShell task will do, and the more payloads you'll generate. What if you want to be able to distinguish between these builds later? In that case, you can split them into different builds on Azure DevOps, and use `tags` to be able to reference specific builds later.
+Ok, that's pretty cool! The more elements you place in the `CONFIGURATIONS` array here, the more loops the PowerShell task will do, and the more payloads you'll generate. What if you want to be able to distinguish between these builds later? In that case, you can split them into different builds on Azure DevOps by adding to the `build_instances` item in the blueprint, and you can use the `tags` item to tag them with labels for easy reference later.
 
 ```json
 [
@@ -283,12 +283,19 @@ This generates a blueprint file that looks like the following:
         "definition": "Demo-Morph",
         "project": "red-team-toolkit",
         "source_branch": "master",
-        "tags": []
+        "tags": ["calc"]
+    },
+    {
+        "__type__": "AzureDownload",
+        "definition": "Demo-Morph",
+        "project": "red-team-toolkit",
+        "source_branch": "master",
+        "tags": ["notepad"]
     }
 ]
 ```
 
-This is fairly straightforward. The only modifications you might make are to the `source_branch` and `tags` fields to suit your own requirements. The `source_branch` field tells Bob which Git branches the builds should have occurred on, and the `tags` field tells Bob which Azure DevOps Build Tags to download (these are not Git tags).  Upon running this with Bob, as expected, all of the listed tools are retrieved and ready for your next engagement.
+This is fairly straightforward. The only modifications you might make are to the `source_branch` and `tags` fields to suit your own requirements. The `source_branch` field tells Bob which Git branches the builds should have occurred on, and the `tags` field tells Bob which Azure DevOps Build Tags to download (these are not Git tags). If you recall from earlier, we tagged our Demo-Morph builds with `calc` and `notepad` tags to distinguish between which build would inject into which application. We use those tags in teh blueprint above to download the appropriate versions. Upon running this with Bob, as expected, all of the listed tools are retrieved and ready for your next engagement.
 
 {% include figure image_path="/assets/images/2020-04-04-automation-through-azure-devops-with-bob/bob-run-downloads.png" caption="Bob Downloads Tools from Azure" %}
 
