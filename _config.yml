@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "The Coffeegist"
+title                    : "Coffeegist"
 title_separator          : "-"
 name                     : "Adam Brown"
 description              : "A collection of tips, tricks, tactics, and procedures for hacking, programming, and coffee galore."
@@ -28,7 +28,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : "coffeegist" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
