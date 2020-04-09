@@ -300,6 +300,10 @@ This is fairly straightforward. The only modifications you might make are to the
 {% include figure image_path="/assets/images/2020-04-04-automation-through-azure-devops-with-bob/bob-run-downloads.png" caption="Bob Downloads Tools from Azure" %}
 
 
+## Integrating Bob
+
+The obvious way to integrate Bob into your workflow is to manually run it. If you want to be super cool and hip and trending with the cool kids though, you'll be using Ansible. So, you can find an ansible role for Bob [on my GitHub](https://github.com/coffeegist/ansible-role-bob-the-builder)!  
+
 ## Coffee Break!
 
 We're not all done here. There are still several steps to automate evasion techniques and reduce the blue team's ability to signature payloads , but this is a good start. I'm encouraged to see all of the work done in automation for offensive tooling, and I can't wait to see how it evolves. Hopefully, this post has given you new ideas around the idea of automation, and I look forward to hearing about them. So, please share those new ideas, and happy hacking!
@@ -308,6 +312,8 @@ We're not all done here. There are still several steps to automate evasion techn
 ### Resources
 
 - [https://github.com/coffeegist/bob-the-builder](https://github.com/coffeegist/bob-the-builder)
+
+- [https://github.com/coffeegist/ansible-role-bob-the-builder](https://github.com/coffeegist/ansible-role-bob-the-builder)
 
 - [https://github.com/coffeegist/changeling](https://github.com/coffeegist/changeling)
 
