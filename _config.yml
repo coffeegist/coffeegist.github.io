@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Coffeegist"
+title                    : "CoffeeGist"
 title_separator          : "-"
 name                     : "Adam Brown"
 description              : "A collection of tips, tricks, tactics, and procedures for hacking, programming, and coffee galore."
@@ -100,11 +100,11 @@ analytics:
 author:
   name             : "Adam Brown"
   avatar           : "/assets/images/logo.png"
-  bio              : "Red Team Developer"
+  bio              : "CEH | OSCP | OSCE<br>Offensive Security Engineer"
   location         :
   email            :
   uri              :
-  home             : # null (default), "absolute or relative url to link to author home"
+  home             : "#" # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
   dribbble         :
