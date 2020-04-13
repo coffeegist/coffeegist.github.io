@@ -3,8 +3,9 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <div>
-          <h1 class="site-title"><a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-          <p class="site-tagline">{{ site.tagline }}</p>
+          <a class="site-title" href="{{ '/' | relative_url }}">
+            <img src='/assets/images/logo.png' style='max-width: 285px'>
+          </a>
         </div>
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}

@@ -20,7 +20,7 @@ title                    : "CoffeeGist"
 title_separator          : "-"
 name                     : "Adam Brown"
 description              : "A collection of tips, tricks, tactics, and procedures for hacking, programming, and coffee galore."
-tagline                  : "Pragmatic Pour-Overs"
+tagline                  : "Coding - Coffee - Hacking"
 url                      : "https://coffeegist.com"
 baseurl                  : ""
 repository               : "coffeegist/coffeegist.github.io"
@@ -99,7 +99,7 @@ analytics:
 # Site Author
 author:
   name             : "Adam Brown"
-  avatar           : "/assets/images/logo.png"
+  avatar           : "/assets/images/avatar.png"
   bio              : "CEH | OSCP | OSCE<br>Offensive Security Engineer"
   location         :
   email            :
