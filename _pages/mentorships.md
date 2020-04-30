@@ -7,7 +7,7 @@ header:
   image: /assets/images/coding-coffee-hacking.jpg
 ---
 
-# One-on-One Mentorship Program
+# Welcome to Your Personal Study Guide!
 
 One of the hardest things about achieving your goals in the field of cybersecurity is simply knowing what do and how to do it. I’ve seen so many students and colleagues struggle to figure out what specific actions to take to achieve their career goals - but you can skip all of that! In a mentorship with me, I’ll handle all the hard parts so that you can have confidence knowing that the content you're studying will take you to the next level!
 
