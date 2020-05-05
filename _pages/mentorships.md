@@ -13,7 +13,7 @@ One of the hardest things about achieving your goals in the field of cybersecuri
 
 As a senior offensive security engineer who has experience in both commercial and government red teaming and penetration testing, I've seen a lot. I taught myself to program at an early age, grabbed my Bachelors and Masters degrees in Software Engineering, and passed both my [OSCP]({% post_url 2017-09-04-my-oscp-experience %}) and [OSCE]({% post_url 2018-06-05-my-osce-review %}) with 100% completion on my first attempts. Some people ask me if they need degrees and formal education to truly be able to conquer their goals. The answer is NO! You just need a plan!
 
-Schedule a FREE 30-minute consultation with me by using the button below. We'll discuss your current goals, where you feel your biggest area for improvement is, and we'll talk about how you can move forward to overcome any obstacles in your way. Whether it's passing the OSCP, or becoming a better programmer, we can do it together!
+Schedule a FREE 30-minute consultation with me by using the button below. We'll discuss your current goals, where you feel your biggest area for improvement is, and we'll talk about how you can move forward to overcome any obstacles in your way. Whether it's passing the OSCP, or becoming a better programmer, we can do it together!!
 
 
 ## Let's Get to Know Each Other!
