@@ -6,7 +6,9 @@ tags: [oscp, hacking, security, review]
 
 When I was young, around the age of 12, I thought that becoming a Certified Ethical Hacker was THE goal in life I wanted to accomplish. Ten years pass by and I achieved that goal, only to find that it was much less fulfilling and technically satisfying than I originally thought. I gave up on certifications until hearing of the Offensive Security Certified Professional (OSCP). It sounded like a fantastic aptitude test to prove to future employers, and myself, that I maintained the mindset of a professional penetration tester.
 
-### **UPDATE:** *If you think you'd like to take this course on, but feel you might not be ready, check out my new [mentorship program](/mentorships/) where we can chat one-on-one to discuss what steps you can take to accomplish any goals you have!*
+### **UPDATE:** *If you are currently taking the OSCP, or plan to do it in the future, check out my new [OSCP strategy guide](https://store.coffeegist.com) where I offer up my entire strategy and arsenal used to pass the OSCP with a 100% success rate on my first attempt!*
+
+*In addition, if you think you'd like to take this course on, but feel you might not be ready, check out my new [mentorship program](/mentorships/) where we can chat one-on-one to discuss what steps you can take to accomplish any goals you have!*
 
 ## My Background
 

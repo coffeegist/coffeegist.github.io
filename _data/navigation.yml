@@ -4,6 +4,8 @@ main:
     url: /
   - title: "Mentorships"
     url: /mentorships/
+  - title: "OSCP Strategy Guide"
+    url: https://store.coffeegist.com/
   #- title: "About"
   #  url: /about/
   # - title: "Sample Posts"
